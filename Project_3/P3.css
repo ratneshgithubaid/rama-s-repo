@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    line-height: 1.4;
+    font-weight: 300;
+    font-family: sans-serif;
+    /* border: 2px solid green; */
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    transition: 0.2s ease-in-out;
+}
+
+button:hover {
+    transition: 0.2s ease-in-out;
+    opacity: 12;
+}
+
+/* Navigation */
+/* hum navigation class ko display flex kar denge taki logo and bar icons comes in same line */
+nav {
+    box-shadow: 5px 5px 5px rgba(1, 1, 1, 0.05);
+    position: sticky;
+    /* abb navbar upper stick ho jayega */
+    top: 0px;
+    margin-bottom: 32px;
+    background-color: skyblue;
+    padding: 10px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo_container img {
+    height: 100px;
+    width: 100px;
+    margin-top: -70px;
+}
+
+.bar_icon i {
+    height: 180px;
+    width: 180px;
+    margin-top: 20px;
+    margin-right: -150px;
+    font-size: 34px;
+}
+
+span {
+    color: green;
+    font-size: 50px;
+    text-transform: uppercase;
+    margin: 10px;
+
+
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+/* Hero Section */
+.hero_image img {
+    height: 300px;
+    width: 340px;
+}
+
+.hero {
+    display: flex;
+    gap: 100px;
+    /* This gap is very helpful to the provide the gap between images and text.*/
+    justify-content: center;
+    align-items: center;
+}
+
+.hero_content {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    gap: 20px;
+    /* this gap property is used to provide gap between the flex items */
+}
+
+.tag {
+    background-color: rgb(21, 156, 21);
+    padding: 5px 10px;
+    color: white;
+    align-self: flex-start;
+    /* This property help to width kam, b/c flexbox ke karan width increase ho gye thi */
+}
+
+.hero_content h1 {
+    font-size: 72px;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+.explore_btn {
+    background-color: rgb(235, 235, 97);
+    align-self: flex-start;
+    /* This property is used to, when hamri box strecthed jada ho too strech ko kam karna hai. */
+}
+
+/* Fetatures Section */
+.features {
+    margin-top: 100px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.feature img {
+    height: 100px;
+    width: 150px;
+}
+
+.feature {
+    display: flex;
+    gap: 20px;
+
+}
+
+.features:hover {
+    border: 2px solid blue;
+    padding: 10px;
+}
+
+/* Menu Section */
+
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+
+.menu .tag {
+    align-self: center;
+}
+
+.grid {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    /* grid-template-areas:
+        " I1 I1 I2 I3"
+        " I1 I1 I2 I7"
+        " I4 I5 I6 I7"
+    ; */
+}
+
+.item img {
+    height: 350px;
+    width: 350px;
+}
+
+
+/* 
+.item1 {
+    grid-area: I1;
+}
+
+.item2 {
+    grid-area: I2;
+}
+
+.item3 {
+    grid-area: I3;
+}
+
+.item4 {
+    grid-area: I4;
+}
+
+.item5 {
+    grid-area: I5;
+}
+
+.item6 {
+    grid-area: I6;
+}
+
+.item7 {
+    grid-area: I7;
+} */
+
+
+@media (max-width:786px) {
+    .hero {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero_content {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    /*  .hero_image ko bhi flex kar sakte hai chayee ekk img tag hi use kiiya ho div me */
+    .hero_image {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .hero_content h1 {
+        font-size: 30px;
+    }
+
+    .features {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
